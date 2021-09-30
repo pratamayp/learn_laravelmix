@@ -2225,12 +2225,15 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_router__WEBPACK_IMPORTED_MOD
 
 
 var myRoutes = [{
+  name: 'Home',
   path: '/home',
   component: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {
+  name: 'About',
   path: '/about',
   component: _pages_About_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
+  name: 'User',
   path: '/user/:name?',
   component: _pages_User_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
   props: true
@@ -38142,11 +38145,13 @@ var render = function() {
   return _c(
     "nav",
     [
-      _c("router-link", { attrs: { to: "/home" } }, [_vm._v("Home")]),
+      _c("router-link", { attrs: { to: { name: "Home" } } }, [_vm._v("Home")]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/about" } }, [_vm._v("About")]),
+      _c("router-link", { attrs: { to: { name: "About" } } }, [
+        _vm._v("About")
+      ]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/user/apx" } }, [_vm._v("User")])
+      _c("router-link", { attrs: { to: { name: "User" } } }, [_vm._v("User")])
     ],
     1
   )
@@ -38249,7 +38254,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.$route.params.name
+  return _vm.name
     ? _c("section", [_c("h1", [_vm._v("Hello User " + _vm._s(_vm.name))])])
     : _c("section", [_c("h1", [_vm._v("Daftar User")])])
 }

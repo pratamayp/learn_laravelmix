@@ -16,28 +16,31 @@ import NotFound from '../pages/NotFound.vue'
 import User from '../pages/User.vue'
 
 const myRoutes = [
-    {
-        path: '/home',
-        component: Home
-    },
-    {
-        path: '/about',
-        component: About
-    },
-    {
-        path: '/user/:name?',
-        component: User,
-        props: true
-    },
-    {
-        path: '*',
-        component: NotFound
-    },
+  {
+    name: 'Home',
+    path: '/home',
+    component: Home
+  },
+  {
+    name: 'About',
+    path: '/about',
+    component: About
+  },
+  {
+    name: 'User',
+    path: '/user/:name?',
+    component: User,
+    props: true
+  },
+  {
+    path: '*',
+    component: NotFound
+  },
 ]
 
 const router = new VueRouter({
-    mode: 'history',
-    routes: myRoutes
+  mode: 'history',
+  routes: myRoutes
 })
 
 export default router

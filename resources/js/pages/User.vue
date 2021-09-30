@@ -1,5 +1,5 @@
 <template>
-    <section v-if="$route.params.name">
+    <section v-if="name">
         <!-- <h1>Hello User {{ $route.params.name }}</h1> -->
         <h1>Hello User {{ name }}</h1>
     </section>
