@@ -28,7 +28,7 @@ const myRoutes = [
   },
   {
     name: 'User',
-    path: '/user/:name?',
+    path: '/user/:username?',
     component: User,
     props: true
   },
@@ -39,6 +39,7 @@ const myRoutes = [
 ]
 
 const router = new VueRouter({
+  linkActiveClass: 'active',
   mode: 'history',
   routes: myRoutes
 })
